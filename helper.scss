@@ -1,0 +1,184 @@
+/*https://css-tricks.com/almanac/*@#/
+
+/*Padrao*/
+html, body {
+  width:100%;
+  height:auto;
+  float:left;
+  padding:0px;
+  margin:0px;
+  height:auto;
+  overflow-x:hidden;
+}
+* {
+  cursor: default;
+  outline: none;
+  resize:none;
+  text-decoration: none;
+  padding: 0px;
+  margin: 0px;
+}
+* , *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+a, a * , input[type="submit"] { cursor: pointer !important; }
+
+/*Animacao*/
+* {
+  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+}
+a, .animacao {
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-tap-highlight-color: transparent;
+}
+.sem-animacao {
+  -moz-transition: none;
+  -o-transition: none;
+  -webkit-transition: none;
+  transition: none;
+}
+
+/*Margins and Padding*/
+.left        { float: left; }
+.right       { float: right; }
+
+.text-left   { text-align: left; }
+.text-right  { text-align: right; }
+.text-center { text-align: center; }
+
+.m0  { margin:        0 }
+.mt0 { margin-top:    0 }
+.mr0 { margin-right:  0 }
+.mb0 { margin-bottom: 0 }
+.ml0 { margin-left:   0 }
+
+.p0  { padding:        0 }
+.pt0 { padding-top:    0 }
+.pr0 { padding-right:  0 }
+.pb0 { padding-bottom: 0 }
+.pl0 { padding-left:   0 }
+
+/*Width and Height*/
+.fit         { max-width: 100%; }
+.half-width  { width: 50% }
+.full-width  { width: 100%; }
+.full-height { height: 100%; }
+
+/*Position and Z-index*/
+.fixed    { position: fixed; }
+.relative { position: relative; }
+.absolute { position: absolute; }
+.static   { position: static; }
+
+.zindex--1 { z-index: -1; }
+.zindex-1  { z-index: 1;  }
+.zindex-2  { z-index: 2;  }
+.zindex-3  { z-index: 3;  }
+
+
+.pin-top-left{
+  top: 0;
+  left: 0;
+}
+
+.pin-bottom-left{
+  bottom: 0;
+  left: 0;
+}
+
+.pin-top-right {
+  top: 0;
+  right: 0;
+}
+.pin-bottom-right {
+  bottom: 0;
+  right: 0;
+}
+
+/*Floated Elements*/
+.clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after { clear: both; }
+}
+
+/*Aligning Elements*/
+.text-left    { text-align: left; }
+.text-right   { text-align: right; }
+.text-center  { text-align: center; }
+.text-just    { text-align: justify; }
+
+.align-top    { vertical-align: top; }
+.align-bottom { vertical-align: bottom; }
+.align-middle { vertical-align: middle; }
+
+/*Display Values*/
+.inline       { display: inline; }
+.block        { display: block; }
+.inline-block { display: inline-block; }
+.hide         { display: none; }
+.flex         { display: flex; }
+
+/*Carousel Bootstrap */
+.carousel-control.left, .carousel-control.right { background-image: none; }
+
+/*Place Holder*/
+@mixin placeholder($color, $font-size, $padding-top) {
+  ::-webkit-input-placeholder {
+    color: $color;
+    font-size: $font-size;
+    padding-top: $padding-top;
+  }
+
+  :-moz-placeholder {
+    color: $color;
+    font-size: $font-size;
+    padding-top: $padding-top;
+  }
+
+  ::-moz-placeholder {
+    color: $color;
+    font-size: $font-size;
+    padding-top: $padding-top;
+  }
+
+  :-ms-input-placeholder {
+    color: $color;
+    font-size: $font-size;
+    padding-top: $padding-top;
+  }
+}
+@include placeholder(red, 15px, 3px);
+
+/*Hide objects*/
+object { display: none; }
+.scrolloff { pointer-events: none; }
+
+/*Responsive*/
+@media only screen and (max-width: 1024px){
+  @-ms-viewport {
+    width: device-width;
+  }
+  * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+  }
+  body { padding-top: 40px; }
+}
