@@ -68,40 +68,25 @@ a, .animacao {
 
 /*Width and Height*/
 .fit         { max-width: 100%; }
-.half-width  { width: 50% }
-.full-width  { width: 100%; }
-.full-height { height: 100%; }
+.half-width  { width: 50%;      }
+.full-width  { width: 100%;     }
+.full-height { height: 100%;    }
 
 /*Position and Z-index*/
-.fixed    { position: fixed; }
+.fixed    { position: fixed;    }
 .relative { position: relative; }
 .absolute { position: absolute; }
-.static   { position: static; }
+.static   { position: static;   }
 
 .zindex--1 { z-index: -1; }
 .zindex-1  { z-index: 1;  }
 .zindex-2  { z-index: 2;  }
 .zindex-3  { z-index: 3;  }
 
-
-.pin-top-left{
-  top: 0;
-  left: 0;
-}
-
-.pin-bottom-left{
-  bottom: 0;
-  left: 0;
-}
-
-.pin-top-right {
-  top: 0;
-  right: 0;
-}
-.pin-bottom-right {
-  bottom: 0;
-  right: 0;
-}
+.pin-top-left     { top: 0; left: 0;     }
+.pin-bottom-left  { bottom: 0; left: 0;  }
+.pin-top-right    { top: 0;  right: 0;   }
+.pin-bottom-right { bottom: 0; right: 0; }
 
 /*Floated Elements*/
 .clearfix {
